@@ -1,0 +1,18 @@
+x1=20;
+x2=21;
+y1=5;
+y2=4;
+q=0:0.01:1;
+demand_slope=(x2-x1)/(y2-y1);
+demand_slope_intercept=y1-demand_slope*x1;
+demand_slope_func=demand_slope*q+demand_slope_intercept;
+supply_x1=4;
+supply_x2=20;
+supply_y1=19;
+supply_y2=5;
+supply_slope=(supply_x2-supply_x1)/(supply_y2-supply_y1);
+supply_slope_intercept=supply_y1-supply_slope*supply_x1;
+supply_slope_func=supply_slope*q+supply_slope_intercept;
+plot(demand_slope_func);
+hold on;
+plot(supply_slope_func);
