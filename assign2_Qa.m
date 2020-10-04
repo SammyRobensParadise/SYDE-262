@@ -1,5 +1,5 @@
 % setting up the quant range
-q=0:40;
+q=10:30;
 
 % get demand supply lines initially 
 supply=q-15;
@@ -20,11 +20,15 @@ producer_surplus=0.5*20*5;
 disp('Producer Surplus');
 disp(producer_surplus);
 
+disp('b)')
+% shift with $1 tax on seller or supply shift left
+supply_with_tax=q-14;
+
 % plot initial graph
-plot(q,supply,q,demand);
+plot(q,supply,q,demand,q,supply_with_tax);
 title('Demand vs. Supply curve for a widget');
 ylabel('Price');
 xlabel('Quantity');
-legend({'Supply','Demand'},'Location','southwest')
+legend({'Supply','Demand','Supply with tax'},'Location','southwest')
 
 
